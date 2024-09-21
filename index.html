@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGT TEST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>🚗</h1>
+        <div class="flashcard-container">
+            <div id="flashcard" class="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <span id="cardNumber" class="card-number"></span>
+                    <div id="frontContent"></div>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <div id="backContent"></div>
+                </div>
+            </div>
+        </div>
+        <div id="noCardsMessage" class="no-cards-message hidden">
+            🎉 All cards memorized! Great job! 🎉
+        </div>
+        <div class="button-container">
+            <button id="prevButton">Prev</button>
+            <button id="nextButton">Next</button>
+        </div>
+        <div class="button-container">
+            <button id="testModeButton">Test Mode</button>
+            <button id="resetButton">Reset</button>
+        </div>
+        <div id="memorizedContainer" class="memorized-container hidden">
+            <input type="checkbox" id="memorizedCheckbox">
+            <label for="memorizedCheckbox">Memorized</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
