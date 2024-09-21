@@ -43,7 +43,7 @@ const flashcardsData = [
     {
         "front": "What is a conventional highway in Spain?",
         "back": "• Any other interurban road\n• No special limitations\n• Single or dual carriageways\n• May have level crossings"
-    }
+    },
     {
         "front": "Which vehicles/users are NOT allowed on autopistas and autovías?",
         "back": "• Bicycles\n• Mopeds\n• Vehicles for people with reduced mobility\n• Pedestrians\n• Animals"
@@ -55,7 +55,7 @@ const flashcardsData = [
     {
         "front": "Can cyclists use the hard shoulder on autopistas and autovías?",
         "back": "• Cyclists over 14 years old may use the hard shoulder\n• Only when not prohibited by signage\n• Only on certain sections where it's explicitly allowed"
-    }
+    },
     {
         "front": "On dual carriageways (autopistas/autovías) with 2 lanes in each direction, where should cars and vehicles >3.5t drive?",
         "back": "• In the right lane\n• This applies both inside and outside urban areas"
