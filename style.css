@@ -142,8 +142,26 @@ button:hover {
     color: var(--text-color);
 }
 
-.flashcard-face {
-    white-space: pre-wrap;
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.category-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 15px;
+}
+
+.category-button.active {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .hidden {
@@ -170,5 +188,10 @@ button:hover {
     button {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
+    }
+
+    .category-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 }

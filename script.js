@@ -1,10 +1,9 @@
-// Flashcard data will be loaded from an external JSON file
 let flashcards = [];
 let currentCardIndex = 0;
 let memorizedCards = new Set();
 let testMode = false;
+let currentCategory = 'all';
 
-// DOM element references
 const flashcardEl = document.getElementById('flashcard');
 const frontContentEl = document.getElementById('frontContent');
 const backContentEl = document.getElementById('backContent');
@@ -17,32 +16,27 @@ const noCardsMessage = document.getElementById('noCardsMessage');
 const memorizedContainer = document.getElementById('memorizedContainer');
 const memorizedCheckbox = document.getElementById('memorizedCheckbox');
 
-// Function to load flashcards from JSON file
-async function loadFlashcardsFromJSON() {
-    try {
-        const response = await fetch('flashcards.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-            flashcards = data;
-            displayCard();
-        } else {
-            showErrorMessage('Flashcards data is empty or not an array');
-        }
-    } catch (error) {
-        showErrorMessage(`Failed to load flashcards: ${error.message}`);
-    }
-}
+const categoryButtons = document.querySelectorAll('.category-button');
 
-function adjustFontSize(element, maxLines = 8, minFontSize = 12) {
-    const maxHeight = parseFloat(getComputedStyle(element).lineHeight) * maxLines;
-    let fontSize = parseFloat(getComputedStyle(element).fontSize);
-    
-    while (element.scrollHeight > maxHeight && fontSize > minFontSize) {
-        fontSize--;
-        element.style.fontSize = `${fontSize}px`;
+async function loadFlashcards() {
+    try {
+        const categories = ['road_use', 'manoeuvring', 'road_signs', 'vehicle', 'documentation', 'accidents'];
+        const allFlashcards = [];
+
+        for (const category of categories) {
+            const response = await fetch(`card_data/${category}.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            allFlashcards.push(...data.map(card => ({ ...card, category })));
+        }
+
+        flashcards = allFlashcards;
+        displayCard();
+    } catch (error) {
+        console.error('Error loading flashcards:', error);
+        showErrorMessage('Failed to load flashcards. Please check the console for more details.');
     }
 }
 
@@ -52,29 +46,41 @@ function showErrorMessage(message) {
     errorMessage.style.color = 'red';
     errorMessage.style.marginTop = '20px';
     document.querySelector('.app-container').appendChild(errorMessage);
-    console.error(message);
+}
+
+function renderContent(contentObj) {
+    if (contentObj.type === 'image') {
+        return `<img src="${contentObj.content}" alt="Flashcard Image" style="max-width: 100%; max-height: 100%; object-fit: contain;">`;
+    } else {
+        return contentObj.content;
+    }
 }
 
 function displayCard() {
-    if (memorizedCards.size === flashcards.length) {
+    if (flashcards.length === 0) {
+        showNoCardsMessage();
+        return;
+    }
+
+    const filteredCards = currentCategory === 'all' 
+        ? flashcards 
+        : flashcards.filter(card => card.category === currentCategory);
+
+    if (filteredCards.length === 0) {
         showNoCardsMessage();
         return;
     }
 
     while (memorizedCards.has(currentCardIndex)) {
-        currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+        currentCardIndex = (currentCardIndex + 1) % filteredCards.length;
     }
 
-    const card = flashcards[currentCardIndex];
-    frontContentEl.textContent = card.front;
-    backContentEl.textContent = card.back;
-    cardNumberEl.textContent = `Card ${currentCardIndex + 1} of ${flashcards.length}`;
+    const card = filteredCards[currentCardIndex];
+    frontContentEl.innerHTML = renderContent(card.front);
+    backContentEl.innerHTML = renderContent(card.back);
+    cardNumberEl.textContent = `Card ${currentCardIndex + 1} of ${filteredCards.length}`;
     flashcardEl.classList.remove('flipped');
     updateMemorizedCheckbox();
-
-    // Apply dynamic font sizing
-    adjustFontSize(frontContentEl);
-    adjustFontSize(backContentEl);
 }
 
 function showNoCardsMessage() {
@@ -100,7 +106,6 @@ function resetCards() {
     noCardsMessage.classList.add('hidden');
 }
 
-// Event Listeners
 flashcardEl.addEventListener('click', () => {
     flashcardEl.classList.toggle('flipped');
 });
@@ -127,5 +132,16 @@ memorizedCheckbox.addEventListener('change', () => {
     displayCard();
 });
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', loadFlashcardsFromJSON);
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        currentCategory = button.id.replace('CategoryButton', '').toLowerCase();
+        if (currentCategory === 'roaduse') currentCategory = 'road_use';
+        if (currentCategory === 'roadsigns') currentCategory = 'road_signs';
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        currentCardIndex = 0;
+        displayCard();
+    });
+});
+
+loadFlashcards();
