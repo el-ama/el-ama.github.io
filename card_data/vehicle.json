@@ -1,0 +1,242 @@
+[
+  {
+    "front": {
+      "type": "image",
+      "content": "/images/road-signs/maxspeed1.png"
+    },
+    "back": {
+      "type": "text",
+      "content": "Maximum speed limit sign: Indicates the maximum speed allowed on the road in kilometers per hour (km/h)."
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the main types of roads in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Interurban roads (highways or 'carreteras')\n• Urban roads\n• Crossings"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Where are 'carreteras' (highways) located?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Outside urban areas (interurban)"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the three main types of interurban roads in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Autopistas (Motorways)\n• Autovías (Dual Carriageways)\n• Conventional Highways"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What is the minimum speed capability required for vehicles on autopistas and autovías?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• 60 km/h"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Key features of autopistas (motorways) in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Separate carriageways\n• Median strips\n• No level crossings\n• Limited access\n• Usually tolled"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Key features of autovías (dual carriageways) in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Separate carriageways\n• Median strips\n• Some level crossings possible\n• Less restricted access\n• Always free"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What is a conventional highway in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Any other interurban road\n• No special limitations\n• Single or dual carriageways\n• May have level crossings"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Which vehicles/users are NOT allowed on autopistas and autovías?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Bicycles\n• Mopeds\n• Vehicles for people with reduced mobility\n• Pedestrians\n• Animals"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Are motorcycles allowed on autopistas and autovías?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Yes, motorcycles are allowed on autopistas and autovías"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Can cyclists use the hard shoulder on autopistas and autovías?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Cyclists over 14 years old may use the hard shoulder\n• Only when not prohibited by signage\n• Only on certain sections where it's explicitly allowed"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What vehicles can use lanes reserved for buses?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Public transport vehicles\n• Taxis (when 'TAXI' is visible on the signage)\n• Other vehicles may use discontinuous sections for specific maneuvers (not for parking, stopping, changing direction, or overtaking)"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the rules for High Occupancy Vehicle (HOV) lanes?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Can be permanent or temporary\n• For vehicles transporting people with Maximum Authorized Mass (MMA) ≤ 3.5 tonnes\n• Must have minimum number of occupants as specified for that section\n• Also usable by:\n  - Buses\n  - Motorcycles\n  - Cars with handicapped signs"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the rules for driving in reversible lanes?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Identified by double broken line markings\n• Headlights must be used at all times (day and night)\n• Driving in the left reversible lane is forbidden\n• Direction of traffic can change based on traffic flow needs"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the three types of circumstantial lanes in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Revertive lanes\n• Additional lanes\n• Contraflow lanes"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the general rules for circumstantial lanes in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Headlights must be used (day and night)\n• Speed limits may apply (typically between 60-80 km/h, but can vary)\n• Drivers must not cross or change the line formed by traffic barriers\n• Specific rules may apply to each type of circumstantial lane"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the rules for contraflow lanes in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Designed to increase traffic flow\n• Only motorcycles and vehicles without trailers are permitted\n• Headlights must be used\n• Speed limits typically between 60-80 km/h (may vary)\n• Follow the same rules as additional circumstantial lanes"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the rules for using the hard shoulder (arcén) in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Hard shoulders are generally not for driving\n• Exceptions for specific vehicles:\n  - Bicycles, mopeds, and slow-moving vehicles must use the hard shoulder if present and passable\n  - Agricultural vehicles and machinery\n  - Road maintenance vehicles\n• Emergency use:\n  - For breakdowns or emergencies\n  - To avoid accidents\n• Temporary use when directed by traffic signs or police"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "Which vehicles must use the hard shoulder in Spain when it's present and passable?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Bicycles\n• Mopeds\n• Slow-moving vehicles (e.g., animal-drawn vehicles)\n• Agricultural vehicles and machinery"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the speed limits (km/h) on motorways and dual carriageways in Spain for different vehicle types?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Cars, motorcycles, motorhomes ≤3.5t, pickups: 60-120\n• Buses and adapted mixed vehicles: 60-100\n• Trucks, vans, motorhomes >3.5t, articulated vehicles (e.g., with trailers): 60-90"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the speed limits (km/h) on conventional highways and single carriageway roads in Spain for different vehicle types?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Cars, motorcycles, motorhomes ≤3.5t, pickups: 45-90\n• Buses and adapted mixed vehicles: 45-90\n• Trucks, vans, motorhomes >3.5t, articulated vehicles (e.g., with trailers): 40-80"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the speed limits (km/h) on different types of urban roads in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Roads with a single lane and sidewalk: 20\n• Roads with one lane per direction: 30\n• Roads with 2 or more lanes per direction: 50\n• Urban sections of highways/motorways: 80 (unless otherwise indicated)"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the speed limits (km/h) for special vehicles in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Tractors and vehicles without brake lights: 25\n• Special vehicles capable of > 60 km/h: 70\n• Other special vehicles: 40\n• Quadricycles and three-wheeled vehicles: 70\n• Cycles and mopeds: 45"
+    }
+  },
+  {
+    "front": {
+      "type": "text",
+      "content": "What are the speed limit reductions for certain vehicles in Spain?"
+    },
+    "back": {
+      "type": "text",
+      "content": "• Vehicles carrying children or dangerous goods: -10 km/h from the generic maximum speed\n• Motorcycles, three-wheeled vehicles, and mopeds when towing: -10% from their maximum speed limit"
+    }
+  }
+]
