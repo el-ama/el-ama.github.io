@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Driving Test Flashcards</title>
+    <title>DGT TEST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <h1>🚗 Spanish Driving Test Flashcards</h1>
-        
+        <h1>🚗</h1>
         <div class="flashcard-container">
             <div id="flashcard" class="flashcard">
                 <div class="flashcard-face flashcard-front">
@@ -21,34 +21,20 @@
                 </div>
             </div>
         </div>
-
         <div id="noCardsMessage" class="no-cards-message hidden">
             🎉 All cards memorized! Great job! 🎉
         </div>
-
         <div class="button-container">
             <button id="prevButton">Prev</button>
             <button id="nextButton">Next</button>
         </div>
-
         <div class="button-container">
             <button id="testModeButton">Test Mode</button>
             <button id="resetButton">Reset</button>
         </div>
-
         <div id="memorizedContainer" class="memorized-container hidden">
             <input type="checkbox" id="memorizedCheckbox">
             <label for="memorizedCheckbox">Memorized</label>
-        </div>
-
-        <div class="category-container">
-            <button id="allCategoryButton" class="category-button">All</button>
-            <button id="roadUseCategoryButton" class="category-button">Road Use</button>
-            <button id="manoeuvringCategoryButton" class="category-button">Manoeuvring</button>
-            <button id="roadSignsCategoryButton" class="category-button">Road Signs</button>
-            <button id="vehicleCategoryButton" class="category-button">Vehicle</button>
-            <button id="documentationCategoryButton" class="category-button">Documentation</button>
-            <button id="accidentsCategoryButton" class="category-button">Accidents</button>
         </div>
     </div>
     <script src="script.js"></script>
